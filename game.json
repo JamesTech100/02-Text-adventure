@@ -1,0 +1,146 @@
+{
+	"MIDCELL": {
+		"name": "Middle of Jail Cell",
+		"desc": "You're surrounded by 3 walls, and a set of rusted iron bars to the North",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "NCELL"
+			},
+			{
+				"exit": "SOUTH",
+				"target": "SCELL"
+			},
+			{
+				"exit": "EAST",
+				"target": "ECELL"
+			},
+			{
+				"exit": "WEST",
+				"target": "WCELL"
+			}
+		]
+	}
+	,"SCELL": {
+		"name": "South wall of Jail Cell",
+		"desc": "There's a small window that shows the desert outside, you can't fit between the bars",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "NCELL"
+			},
+			{
+				"exit": "EAST",
+				"target": "ECELL"
+			},
+			{
+				"exit": "WEST",
+				"target": "WCELL"
+			}
+		]
+	}
+	,"WCELL": {
+		"name": "West wall of Jail Cell",
+		"desc": "a solid gray concrete wall, there's not much to see here",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "NCELL"
+			},
+			{
+				"exit": "EAST",
+				"target": "ECELL"
+			},
+			{
+				"exit": "SOUTH",
+				"target": "SCELL"
+			}
+		]
+	}
+	,"ECELL": {
+		"name": "East wall of Jail Cell",
+		"desc": "a solid gray concrete wall, there's not much to see here",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "NCELL"
+			},
+			{
+				"exit": "WEST",
+				"target": "WCELL"
+			},
+			{
+				"exit": "SOUTH",
+				"target": "SCELL"
+			}
+		]
+	}
+	,"NCELL": {
+		"name": "Rusted Cell Nars",
+		"desc": "You look around at the other cells, no one is around except for a man in the cell directly across. you can [CALL] to the man",
+		"exits": [
+			{
+				"exit": "SOUTH",
+				"target": "MIDCELL"
+			},
+			{
+				"exit": "EAST",
+				"target": "ECELL"
+			},
+			{
+				"exit": "WEST",
+				"target": "WCELL"
+			},
+			{
+				"exit": "CALL",
+				"target": "NCELL_CALL"
+			}
+		]
+	}
+	,"NCELL_CALL": {
+		"name": "You call to the man, he's holding something in his hand",
+		"desc": "Its a key! you can [CATCH] the key",
+		"exits": [
+			{
+				"exit": "SOUTH",
+				"target": "MIDCELL"
+			},
+			{
+				"exit": "CATCH",
+				"target": "NCELL_CATCH"
+			}
+		]
+	}
+	,"NCELL_CATCH": {
+		"name": "outside of the cell after catching the key and opening your cell, you are now in a Hallway between the cells",
+		"desc": "to your west is a guard, to the east is a stairway, the guard sees you and begins his approach",
+		"exits": [
+			{
+				"exit": "EAST",
+				"target": "STAIRWAY"
+			},
+			{
+				"exit": "WEST",
+				"target": "GUARD"
+			}
+		]
+	}
+	,"STAIRWAY": {
+		"name": "Stairway, sprinting down to the bottom as fast as possible",
+		"desc": "There's a door at the bottom at the West Side!",
+		"exits": [
+			{
+				"exit": "WEST",
+				"target": "END"
+			}
+		]
+	}
+	,"GUARD": {
+		"name": "You've been caught by the guard, another 5 years has been added to your sentence, The End",
+		"desc": "Nice try, you're in solitary confinement now"
+	}
+	,"END": {
+		"name": "You're free! you have won the game, The End",
+		"desc": "Good Job!"
+	}
+}
